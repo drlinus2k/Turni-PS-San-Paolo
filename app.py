@@ -99,9 +99,8 @@ st.markdown("""
         font-family: 'Source Sans Pro', sans-serif !important;
     }
 
-    html, body, [class*="st-"] {
+    html, body, [class*="st-"], .stTextInput, .stFileUploader, .stTextInput input, .stFileUploader div {
         font-family: 'Source Sans Pro', sans-serif !important;
-        color: #222 !important;
     }
 
     .stApp {
@@ -117,26 +116,27 @@ st.markdown("""
         font-weight: 300;
     }
 
-    .stTextInput > div > input {
-        background: rgba(0, 0, 0, 0.6) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 0.6em;
+    input[type="text"], .stTextInput > div > input, .stTextArea > div > textarea {
+        background: rgba(0, 0, 0, 0.5) !important;
         color: #ffffff !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 10px !important;
+        padding: 0.6em !important;
+        font-weight: 300 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
     }
 
-    .stTextInput > div > input::placeholder {
+    input::placeholder, textarea::placeholder {
         color: #cccccc !important;
     }
 
     .stFileUploader .upload-drop-zone {
-        background-color: rgba(255,255,255,0.08) !important;
-        border: 2px dashed #888 !important;
-        border-radius: 10px;
-        padding: 1em;
+        background-color: rgba(0, 0, 0, 0.4) !important;
         color: #ffffff !important;
+        border: 2px dashed #888 !important;
+        border-radius: 10px !important;
+        padding: 1em !important;
     }
 
     .stFileUploader > div {
@@ -144,16 +144,16 @@ st.markdown("""
     }
 
     .stButton > button {
-        background-color: #003049;
-        color: #ffffff;
-        border-radius: 6px;
-        border: none;
-        padding: 0.5em 1.2em;
-        font-weight: 400;
+        background-color: #003049 !important;
+        color: #ffffff !important;
+        border-radius: 6px !important;
+        border: none !important;
+        padding: 0.5em 1.2em !important;
+        font-weight: 400 !important;
     }
 
     .stButton > button:hover {
-        background-color: #005f73;
+        background-color: #005f73 !important;
     }
 </style>
 """, unsafe_allow_html=True)

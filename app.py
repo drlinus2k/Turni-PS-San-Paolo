@@ -99,8 +99,9 @@ st.markdown("""
         font-family: 'Source Sans Pro', sans-serif !important;
     }
 
-    html, body, [class*="st-"], .stTextInput, .stFileUploader, .stTextInput input, .stFileUploader div {
+    html, body, [class*="st-"] {
         font-family: 'Source Sans Pro', sans-serif !important;
+        color: #222 !important;
     }
 
     .stApp {
@@ -108,6 +109,11 @@ st.markdown("""
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, h5, h6, .stMarkdown > div {
+        color: #222 !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
     }
 
     .stFileUploader > label, .stTextInput > label {

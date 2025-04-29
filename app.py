@@ -99,7 +99,7 @@ st.markdown("""
         font-family: 'Source Sans Pro', sans-serif !important;
     }
 
-    html, body, [class*="st-"] {
+    html, body, [class*="st-"], .stTextInput, .stFileUploader, .stTextInput input, .stFileUploader div {
         font-family: 'Source Sans Pro', sans-serif !important;
         color: #222 !important;
     }
@@ -113,7 +113,6 @@ st.markdown("""
 
     h1, h2, h3, h4, h5, h6, .stMarkdown > div {
         color: #222 !important;
-        font-family: 'Source Sans Pro', sans-serif !important;
     }
 
     .stFileUploader > label, .stTextInput > label {
@@ -122,10 +121,10 @@ st.markdown("""
         font-weight: 300;
     }
 
-    input[type="text"], .stTextInput > div > input, .stTextArea > div > textarea {
-        background: rgba(0, 0, 0, 0.5) !important;
+    input[type="text"], .stTextInput > div > input {
+        background: rgba(255, 255, 255, 0.12) !important;
         color: #ffffff !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
         backdrop-filter: blur(10px) !important;
         border-radius: 10px !important;
         padding: 0.6em !important;
@@ -133,16 +132,17 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
     }
 
-    input::placeholder, textarea::placeholder {
+    input::placeholder {
         color: #cccccc !important;
     }
 
     .stFileUploader .upload-drop-zone {
-        background-color: rgba(0, 0, 0, 0.4) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
         color: #ffffff !important;
         border: 2px dashed #888 !important;
         border-radius: 10px !important;
         padding: 1em !important;
+        backdrop-filter: blur(8px) !important;
     }
 
     .stFileUploader > div {
@@ -150,12 +150,14 @@ st.markdown("""
     }
 
     .stButton > button {
-        background-color: #003049 !important;
+        background: rgba(0, 48, 73, 0.85) !important;
         color: #ffffff !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
+        font-weight: 500 !important;
+        padding: 0.6em 1.4em !important;
         border: none !important;
-        padding: 0.5em 1.2em !important;
-        font-weight: 400 !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+        backdrop-filter: blur(6px) !important;
     }
 
     .stButton > button:hover {

@@ -15,7 +15,7 @@ ORARI_PREDEFINITI = {
     "PONTE": ("11:30", "18:30"),
 }
 ORARIO_DEFAULT = ("08:00", "14:00")
-INDIRIZZO = "PS San Paolo, Via San Vigilio 22 Milano Italia"
+INDIRIZZO = "Via San Vigilio 22 Milano Italia"
 
 def estrai_turni(df, nome):
     turni = []

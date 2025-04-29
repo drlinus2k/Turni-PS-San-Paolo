@@ -93,15 +93,10 @@ def set_background(image_path):
 
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
-    * {
+    html, body, * {
         font-family: 'Source Sans Pro', sans-serif !important;
-    }
-
-    html, body, [class*="st-"], .stTextInput, .stFileUploader, .stTextInput input, .stFileUploader div {
-        font-family: 'Source Sans Pro', sans-serif !important;
-        color: #222 !important;
     }
 
     .stApp {
@@ -121,15 +116,15 @@ st.markdown("""
         font-weight: 300;
     }
 
-    input[type="text"], .stTextInput > div > input {
-        background: rgba(255, 255, 255, 0.12) !important;
+    input[type="text"], .stTextInput > div > input, .stTextArea > div > textarea {
+        background: rgba(255, 255, 255, 0.08) !important;
         color: #ffffff !important;
         border: 1px solid rgba(255, 255, 255, 0.3) !important;
         backdrop-filter: blur(10px) !important;
         border-radius: 10px !important;
         padding: 0.6em !important;
         font-weight: 300 !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
     }
 
     input::placeholder {
@@ -137,31 +132,44 @@ st.markdown("""
     }
 
     .stFileUploader .upload-drop-zone {
-        background: rgba(255, 255, 255, 0.08) !important;
+        background: rgba(255, 255, 255, 0.06) !important;
         color: #ffffff !important;
-        border: 2px dashed #888 !important;
+        border: 2px dashed #aaa !important;
         border-radius: 10px !important;
         padding: 1em !important;
         backdrop-filter: blur(8px) !important;
     }
 
-    .stFileUploader > div {
+    .stFileUploader > div button {
+        background: rgba(0, 0, 0, 0.7) !important;
         color: #ffffff !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 500 !important;
+        padding: 0.5em 1em !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        font-family: 'Source Sans Pro', sans-serif !important;
     }
 
     .stButton > button {
-        background: rgba(0, 48, 73, 0.85) !important;
+        background: rgba(255, 255, 255, 0.15) !important;
         color: #ffffff !important;
         border-radius: 8px !important;
-        font-weight: 500 !important;
-        padding: 0.6em 1.4em !important;
+        padding: 0.6em 1.2em !important;
         border: none !important;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
         backdrop-filter: blur(6px) !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+        font-family: 'Source Sans Pro', sans-serif !important;
     }
 
     .stButton > button:hover {
         background-color: #005f73 !important;
+    }
+
+    .stTextInput input:focus, .stTextInput input:active {
+        outline: none !important;
+        box-shadow: 0 0 0 1px #ffffff55 !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
     }
 </style>
 """, unsafe_allow_html=True)
